@@ -1,6 +1,6 @@
 import { Body, Controller, Delete, Get, HttpCode, HttpStatus, Param, Patch, Post, Query } from '@nestjs/common';
-import { CoffeesService } from 'src/coffees/coffees.service';
-import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
+import { CoffeesService } from './coffees.service';
+import { PaginationQueryDto } from '../common/dto/pagination-query.dto';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
 import { ApiResponse } from '@nestjs/swagger';
