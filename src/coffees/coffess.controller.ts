@@ -3,11 +3,13 @@ import { CoffeesService } from 'src/coffees/coffees.service';
 import { PaginationQueryDto } from 'src/common/dto/pagination-query.dto';
 import { CreateCoffeeDto } from './dto/create-coffee.dto';
 import { UpdateCoffeeDto } from './dto/update-coffee.dto';
+import { ApiResponse } from '@nestjs/swagger';
 
 @Controller('coffess')
 export class CoffessController {
     constructor(private readonly coffeesServive: CoffeesService) { }
 
+    @ApiResponse({status:403, description:'Forbidden'})
     @Get()
     findAll(@Query() paginationQuery:PaginationQueryDto) {
         //   const {limit,number} = pagination
